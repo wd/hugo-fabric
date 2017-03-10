@@ -1,5 +1,5 @@
 # hugo-fabric
-Hugo Fabric Theme, forked from https://github.com/wd/hexo-fabric. You can visit the live demo at https://wdicc.com.
+Hugo Fabric Theme, forked from https://github.com/wd/hexo-fabric. You can visit live demo at https://wdicc.com.
 
 # Installation
 
@@ -48,3 +48,8 @@ Create a new file `hugo new archives.md`, and edit this file, add the following 
 ```
 type = "archives"
 ```
+
+# Others
+
+* https://github.com/wd/hexo2hugo
+* https://discuss.gohugo.io/t/blog-archives-page/2577/17
