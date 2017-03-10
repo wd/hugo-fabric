@@ -1,0 +1,19 @@
+{{ if .shortname }}
+    {{ if (not .index) }}
+     <script type="text/javascript">
+        var disqus_config = function () {
+            this.page.url = '{{ .post.Permalink }}';
+            this.page.identifier = '{{ .post.Permalink }}';
+        };
+
+        (function() {
+          var d = document, s = d.createElement('script');
+          s.src = '//{{ .shortname }}.disqus.com/embed.js';
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+        })();
+     </script>
+    {{ else }}
+    <script id="dsq-count-scr" src="//{{ .shortname }}.disqus.com/count.js" async></script>
+    {{ end }}
+{{ end }}

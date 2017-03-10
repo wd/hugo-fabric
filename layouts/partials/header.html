@@ -1,0 +1,13 @@
+<!-- for more effects see _animate.scss -->
+<h1 class="animated bounceInDown">
+    <div id="headerbg">
+        {{ .Site.Title }}
+    </div>
+</h1>
+{{ $theme := .Site.Params.theme }}
+<span class="subtitle">{{ if $theme.subtitle }}{{ $theme.subtitle }}{{ end }}</span>
+<br>
+
+{{ partial "social.html" (dict "theme" $theme) }}
+
+{{ partial "navigation.html" . }}

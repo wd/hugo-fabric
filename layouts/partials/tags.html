@@ -1,0 +1,25 @@
+{{ $.Scratch.Add "last" 0 }}
+{{ range .Data.Pages }}
+        {{ $year := .Date.Format "2006" | int }}
+        {{ $post_date := .Date.Format "01-02" }}
+        {{ $last := $.Scratch.Get "last" }}
+        {{ if ne $last $year }}
+            {{ if ne $last 0 }}
+            </section>
+            {{ end }}
+            {{ $.Scratch.Set "last" $year }}
+            <section class="archives"><h1 class="year">{{ $year }}</h1><div class="top-border-padding"></div>
+        {{ end }}
+
+        <article>
+            <h2 class="title"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+        	<div class="meta">
+                <span class="date">{{ $post_date }}</span>
+                <span class="tags">{{ partial "post/tags.html" . }}</span>
+                {{ if $.Site.Params.theme.disqus_shortname }}
+                <span class="comments"><a href="{{ .Permalink }}#disqus_thread">Comments</a></span>
+                {{ end }}
+        	</div>
+        </article>
+{{ end }}
+</section>

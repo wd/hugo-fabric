@@ -1,0 +1,22 @@
+{{ define "body" }}
+{{ $index := true }}
+{{ $pag := $.Paginator }}
+
+{{ partial "disqus.html" (dict "shortname" $.Site.Params.theme.disqus_shortname "index" $index) }}
+
+{{ range where $pag.Pages "Type" "ne" $.Site.Params.theme.archive_post_type }}
+  <article class="post">{{ partial "article.html"  (dict "post" . "index" $index "theme" $.Site.Params.theme) }}</article>
+{{ end }}
+
+{{ if gt $pag.TotalPages 1 }}
+  <nav id="pagenavi">
+    {{ if $pag.HasPrev }}
+        <a href="{{ $pag.Prev.URL }}" class="prev">Prev</a>
+    {{ end }}
+    {{ if $pag.HasNext }}
+        <a href="{{ $pag.Next.URL }}" class="next">Next</a>
+    {{ end }}
+  <div class="center"><a href="/archives/index.html">Blog Archives</a></div>
+  </nav>
+{{ end }}
+{{ end }}

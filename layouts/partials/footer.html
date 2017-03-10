@@ -1,0 +1,9 @@
+<div style="display:inline">
+    Copyright &copy; {{ now | dateFormat "2006" }}
+    {{ if .Site.Params.author }}
+    {{ .Site.Params.author }}
+    {{ else }}
+    {{ .Site.Title }}
+    {{ end }}. Powered by <a href="http://gohugo.io" target="_blank">Hugo</a> |
+    Theme is <a href="https://github.com/wd/hugo-fabric">hugo-fabric</a>, fork from <a href="https://github.com/wd/hexo-fabric">hexo-fabric</a> by <a href="https://wdicc.com">me</a>
+</div>

@@ -1,0 +1,16 @@
+{{ define "body" }}
+<article class="post">{{ partial "article.html" (dict "post" . "index" false) }}</article>
+
+{{ partial "post/sharing.html" (dict "theme" $.Site.Params.theme) }}
+
+{{ partial "disqus.html" (dict "shortname" $.Site.Params.theme.disqus_shortname "index" false "post" .) }}
+
+{{ if $.Site.Params.theme.disqus_shortname }}
+<section id="comment">
+    <h2 class="title">Comments</h2>
+    <div id="disqus_thread" aria-live="polite">
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+</section>
+{{ end }}
+{{ end }}

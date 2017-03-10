@@ -1,0 +1,24 @@
+{{ if .index }}
+    <h2 class="title"> 
+        <a href="{{ .post.URL }}">{{ .post.Title }}</a>
+    </h2>
+    <div class="entry-content">
+    <div class="meta">
+        <div class="date">Published on: {{ partial "post/date.html" .post }}</div>
+        <div class="tags">Tags: {{ partial "post/tags.html" .post }}</div>
+    </div>
+        {{ .post.Content }}
+    </div>
+{{ else }}
+    <h2 class="title">{{ .post.Title }}</h2>
+    <div class="meta">
+        <div class="date">Published on: {{ partial "post/date.html" .post }}</div>
+        <div class="tags">Tags: {{ partial "post/tags.html" .post }}</div>
+    </div>
+    <div class="entry-content">{{ .post.Content }}</div>
+{{ end }}
+<div class="meta">
+    {{ if .theme.disqus_shortname }}
+    <span class="comments"><a href="{{ .post.URL }}#disqus_thread">Comments</a></span>
+    {{ end }}
+</div>

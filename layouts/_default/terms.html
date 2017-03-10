@@ -1,0 +1,7 @@
+{{ define "body" }}
+{{ $site := .Site }}
+{{ $data := .Data }}
+{{ range $key, $value := .Data.Terms.Alphabetical }}
+<a href="{{ $site.LanguagePrefix }}/{{ $data.Plural }}/{{ $value.Name | urlize }}">{{ $value.Name }}</a>({{ $value.Count }})
+{{ end }}
+{{ end }}
