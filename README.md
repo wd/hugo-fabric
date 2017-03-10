@@ -28,6 +28,9 @@ Put settings below into your config.toml.
     post_type = "page" # For archive
     archive_post_type = "archives"
 
+    # According to https://discuss.gohugo.io/t/how-to-access-the-top-level-rsslink-from-a-post/2044, we have to set this ourself
+    site_rsslink = "atom.xml"
+
     # social account
     github_user = "wd"
     twitter_user = "wd"
