@@ -1,4 +1,4 @@
 {{ define "body" }}
-{{ partial "disqus.html" (dict "index" true) }}
+{{ partial "disqus.html" (dict "shortname" $.Site.Params.theme.disqus_shortname "index" true) }}
 {{ partial "archive.html" . }}
 {{ end }}
