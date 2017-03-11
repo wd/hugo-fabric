@@ -1,6 +1,14 @@
 # hugo-fabric
 Hugo Fabric Theme, forked from https://github.com/wd/hexo-fabric. You can visit live demo at https://wdicc.com.
 
+# Features
+
+* Support archives (But archives page and tags page didn't support pagination :( )
+* Tags list
+* RSS link and social account links
+* Disqus support
+* Use Highlight.js for code highlight
+
 # Installation
 
 First clone this repository in the `themes/` directory:
@@ -44,6 +52,10 @@ Put settings below into your config.toml.
     addthis_profile_id = "wd"
 ```
 
+# Code highlight
+
+If you want to change to your favourite highlight style, just download the css file and replace `themes/hugo-fabric/static/css/hljs.css`.
+
 # Archive support
 
 Create a new file `hugo new archives.md`, and edit this file, add the following line in front matter.
@@ -51,6 +63,10 @@ Create a new file `hugo new archives.md`, and edit this file, add the following 
 ```
 type = "archives"
 ```
+
+# Todo
+
+* TOC support
 
 # Others
 

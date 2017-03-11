@@ -2,28 +2,13 @@
 <html>
 <head>
 	<meta charset="utf-8">
-    <!--
-    var title = page.title;
-
-    if (is_archive()){
-      title = 'Archives';
-
-      if (is_month()){
-        title += ': ' + page.year + '/' + page.month;
-      } else if (is_year()){
-        title += ': ' + page.year;
-      }
-    } else if (is_category()){
-      title = 'Category: ' + page.category;
-    } else if (is_tag()){
-      title = 'Tag: ' + page.tag;
-    }
-    -->
     {{ $.Scratch.Add "title" "" }}
-    {{ if eq .Type "Archives" }}
-        {{ $.Scratch.Set "title" "Archives" }}
+    {{ if eq .Type "archives" }}
+    {{ $.Scratch.Set "title" "Archives" }}
+    {{ else if ne .Title .Site.Title }}
+    {{ $.Scratch.Set "title" .Title }}
     {{ end }}
-    <title>{{ if $.Scratch.Get "title" }}{{ $.Scratch.Get "title" }} - {{ end }}{{ .Title }}</title>
+    <title>{{ if $.Scratch.Get "title" }}{{ $.Scratch.Get "title" }} - {{ end }}{{ .Site.Title }}</title>
     <meta name="author" content="{{ .Site.Params.author }}">
     <meta name="description" content="{{ .Description }}">
     <meta name="keywords" content="{{ range .Keywords }}{{ . }},{{ end }}">
@@ -33,7 +18,6 @@
 	<link href="/favicon.ico" rel="shortcut icon">
     <link href="/css/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
     <link href="/css/custom.css" media="screen, projection" rel="stylesheet" type="text/css">
-    <link href="/css/hljs.css" media="screen, projection" rel="stylesheet" type="text/css">
 
     <link href='//fonts.googleapis.com/css?family=Slackey' rel='stylesheet' type='text/css'>
     <link href='//fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
@@ -44,4 +28,8 @@
     <script type="text/javascript" src="/js/jquery-tapir.js"></script>
 
     {{ template "_internal/google_analytics_async.html" . }}
+
+    <link rel="stylesheet" href="/css/hljs.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
 </head>

@@ -1,3 +1,11 @@
+@font-face{
+    font-family: 'MyHermit';
+    src: url('/font/hermit-medium-webfont.eot');
+    src: url('/font/hermit-medium-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/font/hermit-medium-webfont.woff') format('woff'),
+         url('/font/hermit-medium-webfont.ttf') format('truetype');
+}
+
 .subtitle {
   float: right;
   font-family: 'Slackey',cursive;
@@ -5,12 +13,15 @@
   margin-right: 100px;
 }
 
+.tagcount {
+    color: #bbb;
+}
+
 /* for code */
-article code, article pre {
+article code {
   background: oldlace;
   border: 1px solid oldlace;
-  font-family: "Hermit", Monaco, "Andale Mono", "lucida console", "Courier New", monospace; }
-article code {
+  font-family: "MyHermit", "Hermit", "Monaco", "Andale Mono", "lucida console", "Courier New", monospace;
   font-size: 0.9em;
   padding: 1px 3px;
   margin: 0 3px;
@@ -19,11 +30,13 @@ article code {
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
   border-radius: 5px; }
+
 article pre {
   font-size: 1 / 0.9em;
   line-height: 1.5;
   margin-top: 10px;
   padding: 5px 15px;
+  font-family: "Myhermit", "Hermit", "Monaco", "Andale Mono", "lucida console", "Courier New", monospace;
   overflow-x: auto;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
