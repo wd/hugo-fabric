@@ -1,6 +1,8 @@
 # hugo-fabric
 Hugo Fabric Theme, forked from https://github.com/wd/hexo-fabric. You can visit live demo at https://wdicc.com.
 
+![hugo-fabric screenshot](https://raw.githubusercontent.com/wd/hugo-fabric/master/screenshoots/img1.png)
+
 # Features
 
 * Support archives (But archives page and tags page didn't support pagination :( )
