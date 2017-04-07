@@ -16,7 +16,7 @@
     {{ if $pag.HasNext }}
         <a href="{{ $pag.Next.URL }}" class="next">Next</a>
     {{ end }}
-  <div class="center"><a href="/archives/index.html">Blog Archives</a></div>
+    <div class="center"><a href="{{ .Site.BaseURL }}/archives/index.html">Blog Archives</a></div>
   </nav>
 {{ end }}
 {{ end }}

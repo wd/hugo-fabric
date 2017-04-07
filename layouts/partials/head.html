@@ -15,9 +15,11 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
     <link href="{{ .RSSLink }}" rel="alternate" title="{{ .Site.Title }}" type="application/atom+xml">
-	<link href="/favicon.ico" rel="shortcut icon">
-    <link href="/css/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
-    <link href="/css/custom.css" media="screen, projection" rel="stylesheet" type="text/css">
+    <link href="{{ .Site.BaseURL }}/favicon.ico" rel="shortcut icon">
+
+    {{ partial "css/screen.css" . }}
+
+    <link href="{{ .Site.BaseURL }}/css/custom.css" media="screen, projection" rel="stylesheet" type="text/css">
 
     <link href='//fonts.googleapis.com/css?family=Slackey' rel='stylesheet' type='text/css'>
     <link href='//fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
@@ -25,11 +27,11 @@
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
     <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![}]-->
 
-    <script type="text/javascript" src="/js/jquery-tapir.js"></script>
+    <script type="text/javascript" src="{{ .Site.BaseURL }}/js/jquery-tapir.js"></script>
 
     {{ template "_internal/google_analytics_async.html" . }}
 
-    <link rel="stylesheet" href="/css/hljs.css">
+    <link rel="stylesheet" href="{{ .Site.BaseURL }}/css/hljs.css">
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/highlight.min.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
 </head>

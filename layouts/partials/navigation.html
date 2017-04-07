@@ -1,8 +1,8 @@
 <ul id="nav">
-	<li id="ajax"><a href="/index.html">Home</a></li>
-	<li id="ajax"><a href="/archives/index.html">Archives</a></li>
-	<li id="ajax"><a href="/tags/index.html">Tags</a></li>
-    <li><a href="/{{ .Site.Params.theme.site_rsslink }}">RSS</a></li>
+    <li id="ajax"><a href="{{ .Site.BaseURL }}/index.html">Home</a></li>
+    <li id="ajax"><a href="{{ .Site.BaseURL }}/archives/index.html">Archives</a></li>
+    <li id="ajax"><a href="{{ .Site.BaseURL }}/tags/index.html">Tags</a></li>
+    <li><a href="{{ .Site.BaseURL }}/{{ .Site.Params.theme.site_rsslink }}">RSS</a></li>
     <li>
     <div id="dark">
         <form action="//www.google.com.hk/search" method="get" accept-charset="UTF-8" id="search">

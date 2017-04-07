@@ -1,5 +1,5 @@
 {{ if .Params.tags }}
 {{ range .Params.tags }}
-<a href="/tags/{{ . | urlize }}">{{ . }}</a>
+<a href="{{ $.Site.BaseURL }}/tags/{{ . | urlize }}">{{ . }}</a>
 {{ end }}
 {{ end }}

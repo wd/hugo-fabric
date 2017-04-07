@@ -1,11 +1,3 @@
-@font-face{
-    font-family: 'MyHermit';
-    src: url('/font/hermit-medium-webfont.eot');
-    src: url('/font/hermit-medium-webfont.eot?#iefix') format('embedded-opentype'),
-         url('/font/hermit-medium-webfont.woff') format('woff'),
-         url('/font/hermit-medium-webfont.ttf') format('truetype');
-}
-
 .subtitle {
   float: right;
   font-family: 'Slackey',cursive;

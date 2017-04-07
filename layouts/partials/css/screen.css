@@ -1,10 +1,23 @@
+<style>
 @charset "UTF-8";
 @font-face {
   font-family: 'FontAwesome';
-  src: url("/font/fontawesome-webfont.eot");
-  src: url("/font/fontawesome-webfont.eot?#iefix") format("embedded-opentype"), url("/font/fontawesome-webfont.woff") format("woff"), url("/font/fontawesome-webfont.ttf") format("truetype"), url("/font/fontawesome-webfont.svgz#FontAwesomeRegular") format("svg"), url("/font/fontawesome-webfont.svg#FontAwesomeRegular") format("svg");
+  src: url("{{ .Site.BaseURL }}/font/fontawesome-webfont.eot");
+  src: url("{{ .Site.BaseURL }}/font/fontawesome-webfont.eot?#iefix") format("embedded-opentype"),
+  url("{{ .Site.BaseURL }}/font/fontawesome-webfont.woff") format("woff"),
+  url("{{ .Site.BaseURL }}/font/fontawesome-webfont.ttf") format("truetype"),
+  url("{{ .Site.BaseURL }}/font/fontawesome-webfont.svgz#FontAwesomeRegular") format("svg"),
+  url("{{ .Site.BaseURL }}/font/fontawesome-webfont.svg#FontAwesomeRegular") format("svg");
   font-weight: normal;
   font-style: normal; }
+
+@font-face{
+    font-family: 'MyHermit';
+    src: url('{{ .Site.BaseURL }}/font/hermit-medium-webfont.eot');
+    src: url('{{ .Site.BaseURL }}/font/hermit-medium-webfont.eot?#iefix') format('embedded-opentype'),
+         url('{{ .Site.BaseURL }}/font/hermit-medium-webfont.woff') format('woff'),
+         url('{{ .Site.BaseURL }}/font/hermit-medium-webfont.ttf') format('truetype');
+}
 
 * {
   margin: 0;
@@ -14,7 +27,7 @@ body {
   font-family: 'PingFang SC', serif;
   font-weight: 300;
   font-size: 16px;
-  /*background: url("/images/retina_dust.png");*/
+  /*background: url("{{ .Site.BaseURL }}/images/retina_dust.png");*/
   color: #444;
   colori: #666666; }
   @media screen and (max-width: 1040px) {
@@ -78,10 +91,10 @@ a {
   height: 51px;
   border: none;
   text-indent: -999px;
-  background: url(/images/totop.png) no-repeat left top; }
+  background: url({{ .Site.BaseURL }}/images/totop.png) no-repeat left top; }
 
 #w2btoTopHover {
-  background: url(/images/totop.png) no-repeat left -51px;
+  background: url({{ .Site.BaseURL }}/images/totop.png) no-repeat left -51px;
   width: 51px;
   height: 51px;
   display: block;
@@ -225,7 +238,7 @@ a {
   position: absolute;
   right: 50%;
   top: 50%;
-  background: url("/images/loading.gif");
+  background: url("{{ .Site.BaseURL }}/images/loading.gif");
   width: 50px;
   height: 50px;
   text-indent: -9999em; }
@@ -267,59 +280,59 @@ a {
     left: 3px; }
 
 a.facebook {
-  background: url("/images/social/Facebook.png") center no-repeat; }
+  background: url("{{ .Site.BaseURL }}/images/social/Facebook.png") center no-repeat; }
 
 a.facebook:hover {
-  background: url("/images/social/FacebookH.png") center no-repeat; }
+  background: url("{{ .Site.BaseURL }}/images/social/FacebookH.png") center no-repeat; }
 
 a.github {
-  background: url("/images/social/Github.png") center no-repeat; }
+  background: url("{{ .Site.BaseURL }}/images/social/Github.png") center no-repeat; }
 
 a.github:hover {
-  background: url("/images/social/GithubH.png") center no-repeat; }
+  background: url("{{ .Site.BaseURL }}/images/social/GithubH.png") center no-repeat; }
 
 a.twitter {
-  background: url("/images/social/Twitter.png") center no-repeat; }
+  background: url("{{ .Site.BaseURL }}/images/social/Twitter.png") center no-repeat; }
 
 a.twitter:hover {
-  background: url("/images/social/TwitterH.png") center no-repeat; }
+  background: url("{{ .Site.BaseURL }}/images/social/TwitterH.png") center no-repeat; }
 
 a.google {
-  background: url("/images/social/Picasa.png") center no-repeat; }
+  background: url("{{ .Site.BaseURL }}/images/social/Picasa.png") center no-repeat; }
 
 a.google:hover {
-  background: url("/images/social/PicasaH.png") center no-repeat; }
+  background: url("{{ .Site.BaseURL }}/images/social/PicasaH.png") center no-repeat; }
 
 a.skype {
-  background: url("/images/social/Skype.png") center no-repeat; }
+  background: url("{{ .Site.BaseURL }}/images/social/Skype.png") center no-repeat; }
 
 a.skype:hover {
-  background: url("/images/social/SkypeH.png") center no-repeat; }
+  background: url("{{ .Site.BaseURL }}/images/social/SkypeH.png") center no-repeat; }
 
 a.linkedin {
-  background: url("/images/social/LinkedIn.png") center no-repeat; }
+  background: url("{{ .Site.BaseURL }}/images/social/LinkedIn.png") center no-repeat; }
 
 a.linkedin:hover {
-  background: url("/images/social/LinkedInH.png") center no-repeat; }
+  background: url("{{ .Site.BaseURL }}/images/social/LinkedInH.png") center no-repeat; }
 
 a.youtube {
-  background: url("/images/social/Youtube.png") center no-repeat; }
+  background: url("{{ .Site.BaseURL }}/images/social/Youtube.png") center no-repeat; }
 
 a.youtube:hover {
-  background: url("/images/social/YoutubeH.png") center no-repeat; }
+  background: url("{{ .Site.BaseURL }}/images/social/YoutubeH.png") center no-repeat; }
 
 a.lastfm {
-  background: url("/images/social/LastFM.png") center no-repeat; }
+  background: url("{{ .Site.BaseURL }}/images/social/LastFM.png") center no-repeat; }
 
 a.lastfm:hover {
-  background: url("/images/social/LastFMH.png") center no-repeat; }
+  background: url("{{ .Site.BaseURL }}/images/social/LastFMH.png") center no-repeat; }
 
 /* search bar */
 #search {
   display: inline; }
 
 #search input[type="text"] {
-  background: url("/images/search-dark.png") no-repeat 10px 6px #444444;
+  background: url("{{ .Site.BaseURL }}/images/search-dark.png") no-repeat 10px 6px #444444;
   border: 0 none;
   font: bold 12px Arial,Helvetica,Sans-serif;
   color: #777;
@@ -345,7 +358,7 @@ a.lastfm:hover {
   height: 70px; }
 
 #dark #search input[type="text"] {
-  background: url("/images/search-dark.png") no-repeat 10px 6px #444444;
+  background: url("{{ .Site.BaseURL }}/images/search-dark.png") no-repeat 10px 6px #444444;
   border: 0 none;
   font: bold 12px Arial,Helvetica,Sans-serif;
   color: #ddd;
@@ -403,7 +416,7 @@ ul#nav li a:hover {
   color: #fff;
   font-style: normal;
   font-weight: normal;
-  background-image: url("/images/hover.png");
+  background-image: url("{{ .Site.BaseURL }}/images/hover.png");
   background-repeat: no-repeat;
   background-position: center top; }
 
@@ -413,7 +426,7 @@ ul#nav li a:active {
 
 ul#nav li#active a {
   color: #FFF;
-  background-image: url("/images/active.png");
+  background-image: url("{{ .Site.BaseURL }}/images/active.png");
   background-repeat: no-repeat;
   background-position: center top; }
 
@@ -4101,3 +4114,4 @@ body {
   -moz-animation-duration: 0.75s;
   -o-animation-duration: 0.75s;
   animation-duration: 0.75s; }
+</style>
