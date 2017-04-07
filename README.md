@@ -26,6 +26,8 @@ Second, specify `hugo-fabric` as your default theme in the config.toml file. Jus
 theme = "hugo-fabric"
 ```
 
+Please check the `exampleSite` directory for an example site.
+
 # Theme settings
 
 Put settings below into your config.toml.
