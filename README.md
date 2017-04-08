@@ -56,6 +56,10 @@ Put settings below into your config.toml.
     addthis_profile_id = "wd"
 ```
 
+# Favicon
+
+There is a default favicon with this theme, you may want to change it. Just put it at `themes/hugo-fabric/static/images/fav.ico`.
+
 # Code highlight
 
 If you want to change to your favourite highlight style, just download the css file and replace `themes/hugo-fabric/static/css/hljs.css`.
