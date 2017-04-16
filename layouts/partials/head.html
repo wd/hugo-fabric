@@ -16,8 +16,9 @@
 
     <link href="{{ .RSSLink }}" rel="alternate" title="{{ .Site.Title }}" type="application/atom+xml">
     <link href="{{ .Site.BaseURL }}/images/fav.ico" rel="shortcut icon">
-
-    {{ partial "css/screen.css" . }}
+    <style>
+    {{ partial "css/screen.css" . | safeCSS }}
+    </style>
 
     <link href="{{ .Site.BaseURL }}/css/custom.css" media="screen, projection" rel="stylesheet" type="text/css">
 
