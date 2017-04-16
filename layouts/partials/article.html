@@ -18,7 +18,9 @@
     <div class="entry-content">{{ .post.Content }}</div>
 {{ end }}
 <div class="meta">
-    {{ if .theme.disqus_shortname }}
-    <span class="comments"><a href="{{ .post.URL }}#disqus_thread">Comments</a></span>
+    {{ with .theme }}
+    {{ if .disqus_shortname }}
+    <span class="comments"><a href="{{ $.post.URL }}#disqus_thread">Comments</a></span>
+    {{ end }}
     {{ end }}
 </div>
