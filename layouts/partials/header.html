@@ -8,6 +8,8 @@
 <span class="subtitle">{{ if $theme.subtitle }}{{ $theme.subtitle }}{{ end }}</span>
 <br>
 
-{{ partial "social.html" (dict "theme" $theme) }}
+{{ with $theme }}
+{{ partial "social.html" (dict "theme" .) }}
+{{ end }}
 
 {{ partial "navigation.html" . }}

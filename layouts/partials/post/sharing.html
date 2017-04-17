@@ -1,3 +1,4 @@
+{{ if .theme }}
 <div class="share">
 	<div class="addthis_toolbox addthis_default_style ">
 	{{ if .theme.facebook_like }}
@@ -13,3 +14,4 @@
 	</div>
   <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid={{ .theme.addthis_profile_id }}"></script>
 </div>
+{{ end }}
