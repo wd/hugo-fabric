@@ -62,7 +62,7 @@ There is a default favicon with this theme, you may want to change it. Just put 
 
 # Code highlight
 
-If you want to change to your favourite highlight style, just download the css file and replace `themes/hugo-fabric/static/css/hljs.css`.
+If you want to change to your favourite highlight style, just download the css file and replace `themes/hugo-fabric/static/css/hljs.css`. Since all languages package are too big, the CDN version only include 23 languages support. If you want more languages, please download a custome version of highlightjs and modify `layouts/partials/head.html`.
 
 # Archive support
 
