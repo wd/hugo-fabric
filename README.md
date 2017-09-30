@@ -1,5 +1,5 @@
 # hugo-fabric
-Hugo Fabric Theme, forked from https://github.com/wd/hexo-fabric. You can visit live demo at https://wdicc.com.
+Hugo Fabric Theme, forked from https://github.com/wd/hexo-fabric.
 
 ![hugo-fabric screenshot](https://raw.githubusercontent.com/wd/hugo-fabric/master/images/tn.png)
 
@@ -27,6 +27,20 @@ theme = "hugo-fabric"
 ```
 
 Please check the `exampleSite` directory for an example site.
+
+# Hugo settings
+
+Set rss link name, default is rss.xml.
+
+```
+[outputs]
+home = [ "HTML", "RSS" ]
+
+[outputFormats]
+[outputFormats.RSS]
+mediatype = "application/rss"
+baseName = "atom"
+```
 
 # Theme settings
 

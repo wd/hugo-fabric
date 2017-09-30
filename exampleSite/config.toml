@@ -3,7 +3,14 @@ languageCode = "en-us"
 baseurl = "https://example.org/"
 title = "Hugo fabric theme"
 theme = "hugo-fabric"
-rssuri = "atom.xml"
+
+[outputs]
+home = [ "HTML", "RSS" ]
+
+[outputFormats]
+[outputFormats.RSS]
+mediatype = "application/rss"
+baseName = "atom"
 
 [params]
   [params.theme]
