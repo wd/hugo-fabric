@@ -65,8 +65,6 @@ Put settings below into your config.toml.
     # post sharing
     facebook_like = true
     twitter_tweet_button = true
-    google_plus_one = true
-    google_plus_one_size = "midum"
     addthis_profile_id = "wd"
 ```
 
