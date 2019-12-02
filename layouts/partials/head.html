@@ -33,6 +33,6 @@
     {{ template "_internal/google_analytics_async.html" . }}
 
     <link rel="stylesheet" href="{{ .Site.BaseURL }}/css/hljs.css">
-    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/highlight.min.js"></script>
+    <script src="{{ .Site.BaseURL }}/js/hljs.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
 </head>
